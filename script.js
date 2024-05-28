@@ -10,3 +10,12 @@ function getComputerChoice() {
     console.log('Scissors');
   } 
 }
+
+function getHumanChoice() {
+  let humanChoice = prompt("Rock, paper or scissors?: ");
+  if (humanChoice === ' ' || humanChoice === '') {
+    console.log('Not a valid input! Please enter rock, paper or scissors');
+  } else {
+    console.log(humanChoice);
+  }
+}
