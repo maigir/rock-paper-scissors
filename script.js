@@ -6,11 +6,11 @@ let computerScore = 0;
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3 + 1);
   if (computerChoice === 1){
-    console.log('Rock');
+    return 'Rock';
   } else if (computerChoice === 2) {
-    console.log('Paper');
+    return 'Paper';
   } else {
-    console.log('Scissors');
+    return 'Scissors';
   } 
 }
 
@@ -19,6 +19,29 @@ function getHumanChoice() {
   if (humanChoice === ' ' || humanChoice === '') {
     console.log('Not a valid input! Please enter rock, paper or scissors');
   } else {
-    console.log(humanChoice);
+   return humanChoice;
   }
 }
+
+function playRound(humanChoice, computerChoice) {
+  humanChoice.toLowerCase();
+  if (humanChoice === computerChoice){
+    console.log('It\'s a tie!');
+  }
+
+  else if 
+  (humanChoice === 'rock' && computerChoice === 'scissors' || humanChoice === 'scissors' && computerChoice === 'paper' || humanChoice === 'paper' && computerChoice === 'rock') {
+    console.log('You win!'); 
+    humanScore++;
+  }
+
+  else {
+    console.log(`Computer wins!`);
+    computerScore++;
+  }    
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
