@@ -20,7 +20,7 @@ const computerSelection = getComputerChoice();
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-    return 'tie!';
+    return `You entered ${humanChoice}, computer entered ${computerChoice}. It's a tie!`;
   }
 
   else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
@@ -28,17 +28,16 @@ function playRound(humanChoice, computerChoice) {
     humanChoice === 'scissors' && computerChoice === 'paper'
   ) {
     humanScore++;
-    return 'You win!';
+    return `You entered ${humanChoice}, computer entered ${computerChoice}. You win!`;
   }
 
   else {
     computerScore++;
-    return 'Computer wins!';
+    return `You entered ${humanChoice}, computer entered ${computerChoice}. Computer wins!`;
   }
 }
 
 function playGame() {
-  computerScore = humanScore = 0;
 
   playRound(humanSelection, computerSelection);
   playRound(humanSelection, computerSelection);
