@@ -1,6 +1,6 @@
 'use strict';
 
-let humanScore = 0;
+let humanScore = 0; 
 let computerScore = 0;
 
 function getComputerChoice() {
@@ -15,35 +15,39 @@ function getHumanChoice() {
   return human;
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-function playRound(humanChoice, computerChoice) {
-  if (humanChoice === computerChoice) {
-    return `You entered ${humanChoice}, computer entered ${computerChoice}. It's a tie!`;
-  }
-
-  else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
-    humanChoice === 'paper' && computerChoice === 'rock' ||
-    humanChoice === 'scissors' && computerChoice === 'paper'
-  ) {
-    humanScore++;
-    return `You entered ${humanChoice}, computer entered ${computerChoice}. You win!`;
-  }
-
-  else {
-    computerScore++;
-    return `You entered ${humanChoice}, computer entered ${computerChoice}. Computer wins!`;
-  }
-}
-
 function playGame() {
+  let round = 1;
 
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
-  playRound(humanSelection, computerSelection);
+  while (round <= 5) {
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    console.log(`You - ${humanSelection}, computer - ${computerSelection}`);
+    
+    
+    if (humanSelection === computerSelection) {
+      humanScore += 0;
+      computerScore += 0;
+    }
+    else if (humanSelection === 'rock' && computerSelection === 'scissors' ||
+      humanSelection === 'paper' && computerSelection === 'rock' ||
+      humanSelection === 'scissors' && computerSelection === 'paper') 
+    {
+      humanScore += 1;
+    }
+    else {
+      computerScore += 1;
+    }
+    round++;
+  }
 
-
+  if (humanScore > computerScore) {
+    return (`You: ${humanScore}, computer: ${computerScore}. You won!`);
+  } else if (humanScore < computerScore) {
+    return (`You: ${humanScore}, computer: ${computerScore}. Computer won!`);
+  } else if (humanScore === computerScore) {
+    return (`You: ${humanScore}, computer: ${computerScore}. It's a tie!`);
+  }
+ 
 }
+
+console.log(playGame());
