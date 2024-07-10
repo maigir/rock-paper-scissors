@@ -1,5 +1,8 @@
 'use strict';
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   const random = ['rock', 'paper', 'scissors'];
   const randomChoice = Math.floor(Math.random() * random.length);
@@ -11,25 +14,22 @@ function getHumanChoice() {
   return human;
 }
 
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-
-  function playRound(humanChoice, computerChoice) {
-    if (
-      (humanChoice === 'rock' && computerChoice === 'scissors') ||
-      (humanChoice === 'paper' && computerChoice === 'rock') ||
-      (humanChoice === 'scissors' && computerChoice === 'paper')
-    ) {
-      return humanScore++;
-    } else if (humanChoice === computerChoice) {
-      return;
-    } else {
-      return computerScore++;
-    }
+function playRound(humanChoice, computerChoice) {
+  if (
+    (humanChoice === 'rock' && computerChoice === 'scissors') ||
+    (humanChoice === 'paper' && computerChoice === 'rock') ||
+    (humanChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    return humanScore++;
+  } else if (humanChoice === computerChoice) {
+    return;
+  } else {
+    return computerScore++;
   }
+}
 
-  for (let i = 1; i < 5; i++) {
+function playGame() {
+  for (let i = 1; i < 6; i++) {
     playRound(getHumanChoice(), getComputerChoice());
   }
 
