@@ -45,8 +45,19 @@ h1 {
 
 .results {
   height: 300px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .btn:active {
   transform: scale(0.95);
+}
+
+.par {
+  text-align: center;
+  font-size: 2rem;
 }
