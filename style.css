@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: beige;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 30px auto;
+  padding: 10px 100px;
+  width: 50%;
+  text-transform: uppercase;
+  border: 0.5px solid black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  padding: 8px 50px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.results {
+  height: 300px;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
