@@ -26,6 +26,7 @@ h1 {
 .btn-container {
   display: flex;
   justify-content: center;
+  height: 100px;
 }
 
 .btn {
@@ -43,8 +44,12 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+.btn:active {
+  transform: scale(0.95);
+}
+
 .results {
-  height: 300px;
+  height: 200px;
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -53,11 +58,22 @@ h1 {
   font-weight: bold;
 }
 
-.btn:active {
-  transform: scale(0.95);
+.scores {
+  margin: 30px auto;
+}
+
+.score {
+  text-align: center;
 }
 
 .par {
   text-align: center;
   font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.result-text {
+  width: 50%;
+  height: 100px;
+  margin: auto;
 }
