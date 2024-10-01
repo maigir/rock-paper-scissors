@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: beige;
+  min-height: 95vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 30px auto;
+  padding: 10px 0;
+  width: 100%;
+  text-transform: uppercase;
+  border: 0.5px solid black;
+}
+
+.results {
+  height: 170px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.scores {
+  margin: 30px auto;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#score-p,
+#score-c {
+  margin-top: 20px;
+}
+
+.scores-btn {
+  position: relative;
+  top: -60px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 200px;
+  margin: auto;
+}
+
+.result-choice {
+  text-align: center;
+  align-content: center;
+  height: 100px;
+  width: 70%;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 8px 50px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-newGame {
+  width: 190px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
