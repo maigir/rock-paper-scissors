@@ -11,20 +11,33 @@
 <body>
   <h1>Rock, paper, scissors</h1>
   <div class="results">
-    <div>
-      <p class="scores">YOUR SCORE:</p>
-      <p class="score">0</p>
+    <div class="scores">
+      <p>YOUR SCORE:</p>
+      <p id="score-p"></p>
     </div>
-    <div>
-      <p class="scores">COMPUTER SCORE:</p>
-      <p class="score">0</p>
+    <div class="scores scores-btn">
+      <button class="btn btn-newGame">New game</button>
+    </div>
+    <div class="scores">
+      <p>COMPUTER SCORE:</p>
+      <p id="score-c"></p>
     </div>
   </div>
-  <div class="result-text"></div>
+  <div class="result-container">
+    <div class="result-choice">
+      <p></p>
+    </div>
+    <div class="result-choice">
+      <p></p>
+    </div>
+    <div class="result-choice">
+      <p></p>
+    </div>
+  </div>
   <div class="btn-container">
-    <button id="rock" class="rock btn">ROCK</button>
-    <button id="paper" class="paper btn">PAPER</button>
-    <button id="scissors" class="scissors btn">SCISSORS</button>
+    <button class="rock btn">ROCK</button>
+    <button class="paper btn">PAPER</button>
+    <button class="scissors btn">SCISSORS</button>
   </div>
 
   <script src="./script.js"></script>
