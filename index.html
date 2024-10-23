@@ -9,35 +9,20 @@
 </head>
 
 <body>
-  <h1>Rock, paper, scissors</h1>
-  <div class="results">
+  <div class="container">
+    <h1>Rock, Paper, Scissors</h1>
+    <button class="newGame btn">New Game</button>
+    <p class="scoreCount">Moves left: 5</p>
     <div class="scores">
-      <p>YOUR SCORE:</p>
-      <p id="score-p"></p>
+      <p class="score score-h">You: 0</p>
+      <p class="score score-c">Computer: 0</p>
     </div>
-    <div class="scores scores-btn">
-      <button class="btn btn-newGame">New game</button>
+    <div class="result-text"></div>
+    <div class="btns">
+      <button class="btn playerChoice" id="rock">Rock</button>
+      <button class="btn playerChoice" id="paper">Paper</button>
+      <button class="btn playerChoice" id="scissors">Scissors</button>
     </div>
-    <div class="scores">
-      <p>COMPUTER SCORE:</p>
-      <p id="score-c"></p>
-    </div>
-  </div>
-  <div class="result-container">
-    <div class="result-choice">
-      <p></p>
-    </div>
-    <div class="result-choice">
-      <p></p>
-    </div>
-    <div class="result-choice">
-      <p></p>
-    </div>
-  </div>
-  <div class="btn-container">
-    <button class="rock btn">ROCK</button>
-    <button class="paper btn">PAPER</button>
-    <button class="scissors btn">SCISSORS</button>
   </div>
 
   <script src="./script.js"></script>
